@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body style="background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); ">
+<div style="font-family:verdana">
+<h3>Click to open new window.</h3>
+<button onclick="myFunction()">Open Window</button>
+<button onclick="closeWin()">Close Window</button>
+<p style="color:#2C0F35;font-size:25px" id="screen"></p></font><br>
+<p style="color:#CD8989;font-size:25px">Click to change the location of the page.</p></font>
+<input type="button" value="New Location" onclick="newDoc()"><br><br>
+
+<font size="5" color="orange"><p id="navigation"></p></font>
+<a href="Exp6(2).html">Next Page</a>
+</div>
+
+
+<script>
+function myFunction() {
+  myWindow=window.open("https://www.google.com","_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=yes,width=100, height=100");
+}
+function closeWin() {
+  myWindow.close(); 
+  }
+  document.getElementById("screen").innerHTML = 
+"Screen width is " + screen.availWidth;
+
+function newDoc() {
+  window.location.assign("https://www.facebook.com")
+}
+document.getElementById("navigation").innerHTML ="Language of the browser is:  "
++navigator.language;
+
+</script>
+
+</body>
+</html>
